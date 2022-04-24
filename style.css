@@ -1,0 +1,44 @@
+body {
+    background-color: rgb(220, 235, 240);
+    align-content: center;
+}
+
+#mainSection > h1 {
+    color: darkslategray;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+#mainSection {
+    width: 70%;
+    margin-top: 200px;
+    margin-left: 15%;
+    margin-right: 15%;
+    align-items: center;
+}
+
+#coordInput {
+    color: darkslategray;
+    align-items: center;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+#calculate {
+    color: darkslategray;
+}
+
+.output {
+    align-items: center;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+.kontakt {
+    align-self: center;
+    margin-top: 300px;
+    width: 100%;
+    color: darkslategray;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ; 
+}

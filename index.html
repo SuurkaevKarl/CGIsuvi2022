@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Karl Suurkaev - CGI suvepraktika</title>
+        <link rel="stylesheet" href="style.css">
+        <script type="text/javascript" src="suncalc-master/suncalc.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+    <body>
+        <div id="mainSection">
+            <h1>Öö pikkuse kuvar</h1>
+            <form id="coordInput">
+                <label for="longitude">Longitude:</label>
+                <input type="text" id="longitude"><br>
+                <label for="latitude">Latitude:</label>
+                <input type="text" id="latitude"><br>
+                <label for="date">Date:</label>
+                <input type="date" id="date">
+                <input type="button" id="calculate" value="Calculate" onclick="validateForm()">
+            </form>
+            <p id="output1" class="output">...</p>
+            <p id="output2" class="output"></p>
+            <p id="output3" class="output"></p>
+        </div>
+        <footer class="kontakt">
+            Koostas Karl Suurkaev - suurkarl@gmail.com
+        </footer>
+    </body>
+</html>
