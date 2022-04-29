@@ -28,6 +28,18 @@ body {
     color: darkslategray;
 }
 
+#mapSection {
+    align-self: center;
+    align-items: center;
+}
+
+#map {
+    display: block;
+    margin: auto;
+    align-self: center;
+    text-align: center;
+}
+
 .output {
     align-items: center;
     text-align: center;

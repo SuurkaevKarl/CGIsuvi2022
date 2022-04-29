@@ -28,6 +28,7 @@ function validateForm() {
     if (!isNumeric(latitude)) {
         setOutput("Failed to parse latitude as a number!", "", "", "red");
         console.log("Latitude not numeric")
+        return false;
     }
     latitude = parseFloat(latitude);
     if (latitude > 180 || latitude < -180) {
@@ -44,6 +45,7 @@ function validateForm() {
     }
 
     calcData(longitude, latitude, date);
+    displayMapCoords();
     return true;
 }
 
@@ -121,4 +123,25 @@ function calcNightLength(times) {
     }
     
     return nightTotalH.toString() + "h " + nightTotalM.toString() + "m " + nightTotalS + "s";
+}
+
+function displayMapCoords() {
+    longitude = document.getElementById("longitude").value;
+    latitude = document.getElementById("latitude").value;
+    console.log("Displaying longitude:", longitude, "and latitude:", latitude);
+    var source = "https://www.openstreetmap.org/export/embed.html?bbox=";
+    source += (parseFloat(longitude) - 10).toString();
+    source += "%2C";
+    source += (parseFloat(latitude) - 10).toString();
+    source += "%2C";
+    source += (parseFloat(longitude) + 10).toString();
+    source += "%2C";
+    source += (parseFloat(latitude) + 10).toString();
+    source += "%2C";
+    source += "&amp;layer=mapnik&amp;marker=";
+    source += longitude;
+    source += "%2C";
+    source += latitude;
+    console.log(source);
+    document.getElementById("map").src = source;
 }
